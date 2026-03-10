@@ -1,0 +1,7 @@
+project_id = "idrsqzlzifjakjcpqwgy"
+
+[functions.admin-subscribers]
+verify_jwt = false
+
+[functions.admin-content]
+verify_jwt = false

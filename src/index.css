@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 220 25% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 10%;
+
+    --primary: 225 65% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 93%;
+    --secondary-foreground: 220 25% 18%;
+
+    --muted: 220 15% 93%;
+    --muted-foreground: 220 10% 46%;
+
+    --accent: 225 55% 95%;
+    --accent-foreground: 225 65% 42%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 56% 39%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 30 50% 12%;
+
+    --info: 205 78% 48%;
+    --info-foreground: 0 0% 100%;
+
+    --fallback: 40 40% 95%;
+    --fallback-foreground: 35 30% 30%;
+    --fallback-border: 40 35% 82%;
+
+    --finland: 215 45% 95%;
+    --finland-foreground: 215 30% 28%;
+    --finland-border: 215 35% 82%;
+
+    --border: 220 15% 89%;
+    --input: 220 15% 89%;
+    --ring: 225 65% 52%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 25% 10%;
+    --sidebar-primary: 225 65% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 93%;
+    --sidebar-accent-foreground: 220 25% 18%;
+    --sidebar-border: 220 15% 89%;
+    --sidebar-ring: 225 65% 52%;
+
+    --chart-1: 225 65% 52%;
+    --chart-2: 152 56% 39%;
+    --chart-3: 38 92% 50%;
+    --chart-4: 280 55% 55%;
+    --chart-5: 340 65% 55%;
+
+    --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, -apple-system, sans-serif;
+    --font-serif: 'DM Serif Display', ui-serif, Georgia, serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+    --shadow-2xs: 0 1px 2px 0 hsl(220 25% 10% / 0.03);
+    --shadow-xs: 0 1px 3px 0 hsl(220 25% 10% / 0.04);
+    --shadow-sm: 0 1px 3px 0 hsl(220 25% 10% / 0.06), 0 1px 2px -1px hsl(220 25% 10% / 0.06);
+    --shadow: 0 4px 6px -1px hsl(220 25% 10% / 0.07), 0 2px 4px -2px hsl(220 25% 10% / 0.05);
+    --shadow-md: 0 6px 10px -2px hsl(220 25% 10% / 0.08), 0 3px 6px -3px hsl(220 25% 10% / 0.06);
+    --shadow-lg: 0 10px 20px -4px hsl(220 25% 10% / 0.1), 0 4px 8px -4px hsl(220 25% 10% / 0.06);
+    --shadow-xl: 0 20px 30px -6px hsl(220 25% 10% / 0.12), 0 8px 12px -6px hsl(220 25% 10% / 0.06);
+    --shadow-2xl: 0 25px 50px -12px hsl(220 25% 10% / 0.25);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+
+  .dark {
+    --background: 222 25% 8%;
+    --foreground: 220 15% 95%;
+
+    --card: 222 20% 12%;
+    --card-foreground: 220 15% 95%;
+
+    --popover: 222 20% 12%;
+    --popover-foreground: 220 15% 95%;
+
+    --primary: 225 70% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 222 15% 18%;
+    --secondary-foreground: 220 15% 90%;
+
+    --muted: 222 15% 18%;
+    --muted-foreground: 220 10% 55%;
+
+    --accent: 225 30% 20%;
+    --accent-foreground: 225 70% 72%;
+
+    --destructive: 0 65% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 152 50% 44%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 75% 48%;
+    --warning-foreground: 0 0% 100%;
+
+    --info: 205 65% 55%;
+    --info-foreground: 0 0% 100%;
+
+    --fallback: 40 15% 14%;
+    --fallback-foreground: 40 20% 72%;
+    --fallback-border: 40 12% 22%;
+
+    --finland: 215 18% 14%;
+    --finland-foreground: 215 18% 72%;
+    --finland-border: 215 12% 22%;
+
+    --border: 222 15% 18%;
+    --input: 222 15% 20%;
+    --ring: 225 70% 62%;
+
+    --sidebar-background: 222 25% 6%;
+    --sidebar-foreground: 220 15% 95%;
+    --sidebar-primary: 225 70% 62%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 222 15% 18%;
+    --sidebar-accent-foreground: 220 15% 90%;
+    --sidebar-border: 222 15% 18%;
+    --sidebar-ring: 225 70% 62%;
+
+    --chart-1: 225 70% 62%;
+    --chart-2: 152 50% 44%;
+    --chart-3: 38 75% 48%;
+    --chart-4: 280 50% 60%;
+    --chart-5: 340 60% 60%;
+
+    --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.15);
+    --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.2);
+    --shadow-sm: 0 1px 3px 0 hsl(0 0% 0% / 0.25), 0 1px 2px -1px hsl(0 0% 0% / 0.2);
+    --shadow: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -2px hsl(0 0% 0% / 0.2);
+    --shadow-md: 0 6px 10px -2px hsl(0 0% 0% / 0.3), 0 3px 6px -3px hsl(0 0% 0% / 0.25);
+    --shadow-lg: 0 10px 20px -4px hsl(0 0% 0% / 0.35), 0 4px 8px -4px hsl(0 0% 0% / 0.25);
+    --shadow-xl: 0 20px 30px -6px hsl(0 0% 0% / 0.4), 0 8px 12px -6px hsl(0 0% 0% / 0.3);
+    --shadow-2xl: 0 25px 50px -12px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: -0.01em;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    letter-spacing: -0.025em;
+    line-height: 1.3;
+  }
+}
+
+@layer utilities {
+  .animate-in {
+    animation: animate-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+  .animate-in-delay-1 {
+    animation: animate-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+  }
+  .animate-in-delay-2 {
+    animation: animate-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+  }
+  .animate-in-delay-3 {
+    animation: animate-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+  }
+  .animate-in-delay-4 {
+    animation: animate-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+  }
+  .animate-in-delay-5 {
+    animation: animate-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+  }
+
+  .card-hover {
+    @apply transition-all duration-200 ease-out;
+  }
+  .card-hover:hover {
+    @apply shadow-md -translate-y-0.5;
+  }
+  .card-hover:active {
+    @apply shadow-sm translate-y-0 scale-[0.99];
+  }
+
+  .glass-card {
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+  }
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes progress-fill {
+  from { width: 0; }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
