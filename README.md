@@ -1,4 +1,4 @@
-# Haapavesi Guide Hub
+# Haapavesi Digi Assistant
 
 ## Project info
 
