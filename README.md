@@ -2,7 +2,7 @@
 
 ## Project info
 
-**URL**: https://haapavesi-guide-hub.vercel.app
+**URL**: https://digital-immigrant-assistant.vercel.app
 
 Haapavesi Guide Hub is a web application that provides a centralized guide to the town of Haapavesi in Northern Ostrobothnia, Finland.[page:1]
 
