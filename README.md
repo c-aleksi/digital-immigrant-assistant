@@ -1,78 +1,202 @@
-# Haapavesi Digi Assistant
+# Digital Immigrant Assistant
 
-## Project info
+## Overview
 
-**URL**: https://digital-immigrant-assistant.vercel.app
+Digital Immigrant Assistant is a web application that provides structured guidance and localized information for immigrants and new residents in Haapavesi, Finland.
 
-Haapavesi Guide Hub is a web application that provides a centralized guide to the town of Haapavesi in Northern Ostrobothnia, Finland.[page:1]
+The application helps users navigate practical topics such as relocation, documents and residence status, work and employment, education, healthcare, family services, and local resources. It is designed as a centralized guide that combines structured content with an admin-managed knowledge base.
 
-## Tech stack
+Production URL  
+https://digital-immigrant-assistant.vercel.app
 
-This project is built with:[page:1]
+---
 
-- Vite
-- TypeScript
+## Features
+
+User functionality
+
+- Guided information for immigrants and new residents
+- Structured content organized by life situations
+- Localized information related to Haapavesi and Finland
+- Responsive interface for desktop and mobile
+
+Admin functionality
+
+- Admin panel for managing guide content
+- Editing and publishing informational articles
+- Managing content collections and steps
+- Database-backed content management via Supabase
+
+---
+
+## Technology Stack
+
+Frontend
+
 - React
-- shadcn-ui
+- TypeScript
+- Vite
 - Tailwind CSS
-- Supabase (backend, database, auth)
-- Vercel (deployment)
+- shadcn-ui
 
-## Local development
+Backend and data
 
-Prerequisites:[page:1]
+- Supabase
+- Supabase Edge Functions
+- PostgreSQL (via Supabase)
 
-- Node.js and npm installed
-- Git installed
+Infrastructure
 
-Steps:
+- GitHub (source control)
+- Vercel (deployment and hosting)
 
-```sh
-# 1. Clone the repository
-git clone https://github.com/c-aleksi/haapavesi-guide-hub.git
+---
 
-# 2. Go to project directory
-cd haapavesi-guide-hub
+## Repository
 
-# 3. Install dependencies
+GitHub repository
+
+https://github.com/c-aleksi/digital-immigrant-assistant
+
+---
+
+## Local Development
+
+### Prerequisites
+
+The following tools must be installed:
+
+Node.js  
+npm  
+Git
+
+### Clone repository
+
+```bash
+git clone https://github.com/c-aleksi/digital-immigrant-assistant.git
+cd digital-immigrant-assistant
+````
+
+### Install dependencies
+
+```bash
 npm install
+```
 
-# 4. Create .env file and configure environment variables (Supabase keys, etc.)
+### Configure environment variables
 
-# 5. Start dev server
+Create a `.env` file in the project root and add required environment variables.
+Typical configuration includes Supabase connection values.
+
+Example:
+
+```env
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
+```
+
+Environment variables used in production must also be configured in Vercel project settings.
+
+### Start development server
+
+```bash
 npm run dev
 ```
 
-The app will be available at http://localhost:5173 by default (Vite default port).[page:1]
+By default the application runs on:
 
-## Project structure
+[http://localhost:5173](http://localhost:5173)
 
-- `src/` – React components, pages, hooks and utilities
-- `public/` – static assets and base HTML
-- `supabase/` – database schema, migrations and Supabase configuration
-- `tailwind.config.ts`, `postcss.config.js` – styling configuration
-- `vite.config.ts` – Vite build and dev server configuration
-- `vitest.config.ts` – test configuration
-- `tsconfig*.json` – TypeScript configuration files[page:1]
+---
 
-## Scripts
+## Project Structure
 
-Common npm scripts (see `package.json`):[page:1]
+```
+src/
+  components/        reusable UI components
+  pages/             application pages (public and admin)
+  contexts/          React context providers
+  hooks/             custom React hooks
+  services/          API and service layer
+  types/             TypeScript types
 
-- `npm run dev` – start development server with HMR
-- `npm run build` – build production bundle
-- `npm run preview` – preview built app locally
-- `npm run test` – run tests with Vitest
-- `npm run lint` – run ESLint
+public/
+  static assets
+
+supabase/
+  functions/         Supabase Edge Functions
+  migrations/        database migrations
+  config.toml        Supabase configuration
+```
+
+Configuration files
+
+```
+vite.config.ts
+tailwind.config.ts
+tsconfig*.json
+vitest.config.ts
+vercel.json
+```
+
+---
+
+## Available Scripts
+
+Common npm scripts defined in `package.json`.
+
+Development server
+
+```bash
+npm run dev
+```
+
+Production build
+
+```bash
+npm run build
+```
+
+Preview production build locally
+
+```bash
+npm run preview
+```
+
+Lint code
+
+```bash
+npm run lint
+```
+
+Run tests
+
+```bash
+npm run test
+```
+
+---
 
 ## Deployment
 
-The project is deployed to Vercel and connected to this GitHub repository for automatic deployments from the `main` branch.[page:1]
+The project is deployed on Vercel.
 
-To update the production deployment:
+Deployment flow
 
-1. Commit and push changes to `main`.
-2. Vercel will automatically build and deploy the latest version.[page:1]
+1. Changes are committed locally.
+2. Code is pushed to the `main` branch.
+3. Vercel automatically builds and deploys the project.
+4. The new version becomes available on the production URL.
 
-Custom domains and additional deployment settings can be configured in the Vercel project settings.[page:1]
+Deployment configuration can be managed in Vercel project settings.
+
+---
+
+## Notes
+
+This repository represents the independent development repository for the Digital Immigrant Assistant project.
+
+It contains the frontend application, admin interface, and Supabase configuration required to run the system.
+
+```
 ```
