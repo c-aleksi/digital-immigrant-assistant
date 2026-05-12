@@ -8,6 +8,7 @@ The application helps users navigate practical topics such as relocation, docume
 
 Production URL  
 https://digital-immigrant-assistant.vercel.app
+https://digital-immigrant-assistant.vercel.app/admin/
 
 ---
 
